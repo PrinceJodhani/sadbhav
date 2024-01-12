@@ -1105,3 +1105,34 @@ button.filter-button.gallery-btn:hover {
 span.price-tick {
   color: var(--primary-color);
 }
+
+
+
+
+
+
+
+
+
+
+/* Default styles for all screen sizes */
+.logo {
+  width: 300px;
+  height: 150px;
+}
+
+/* Media query for tablets (e.g., iPad) */
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 150px;
+    height: 75px;
+  }
+}
