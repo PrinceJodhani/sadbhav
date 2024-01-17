@@ -356,17 +356,27 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 pb-3">
+        <div class="col-lg-3 col-md-6 pb-3" id="downloadDiv">
           <div class="icon-box p-4 bg-light border-radius-10 text-center">
-            <div class="icon-box-icon">
-             <img src="./images/psycho.png" width="50" height="50">
-            </div>
-            <div class="icon-box-content">
-              <h3 class="card-title py-2">Psychotherapy</h3>
-              <p>Transformative psychotherapy: healing minds, fostering growth, and promoting emotional well-being.</p>
-            </div>
+              <div class="icon-box-icon">
+                  <img src="./images/psycho.png" width="50" height="50">
+              </div>
+              <div class="icon-box-content">
+                  <h3 class="card-title py-2">Psychotherapy</h3>
+                  <p>Transformative psychotherapy: healing minds, fostering growth, and promoting emotional well-being.</p>
+              </div>
+              <!-- Hidden download link -->
+              <a id="downloadLink" href="./Psychotherapy by Dr. Jash Ajmera.pdf" style="font-weight: 500;" download>Download Brochure</a>
           </div>
-        </div>
+      </div>
+
+      <script>
+        document.getElementById('downloadDiv').addEventListener('click', function () {
+            // Triggering the click event on the hidden link
+            document.getElementById('downloadLink').click();
+        });
+    </script>
+    
         <div class="col-lg-3 col-md-6 pb-3">
           <div class="icon-box p-4 bg-light border-radius-10 text-center">
             <div class="icon-box-icon">
@@ -386,6 +396,18 @@
             </div>
             <div class="icon-box-content">
               <h3 class="card-title py-2">Sexologist</h3>
+              <p>Specialized care for psychosexual dysfunctions, restoring intimacy and holistic wellness.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 pb-3">
+          <div class="icon-box p-4 bg-light border-radius-10 text-center">
+            <div class="icon-box-icon">
+              <img src="./images/sexo.png" height="50" width="50">
+
+            </div>
+            <div class="icon-box-content">
+              <h3 class="card-title py-2">Online Consultation</h3>
               <p>Specialized care for psychosexual dysfunctions, restoring intimacy and holistic wellness.</p>
             </div>
           </div>
@@ -505,8 +527,11 @@
                 </div><!--swiper-slide-->
               </div>
               <div class="swiper-pagination text-left"></div>
+
+
             </div>
-          </div>
+      <!-- <a href="https://maps.app.goo.gl/VakPCE7vrYmwgrG36" class="btn btn-medium btn-primary btn-pill text-uppercase text-center mx-auto" style="width: 200px;height: 45px;padding-top: 1ch;">View More</a> -->
+    </div>
         </div>
       </div>
     </div>
