@@ -34,17 +34,28 @@
       text-align: center; /* Optional: Center the image */
     }
 
-    .img-fluid {
+    .img-fluidd {
       max-width: 100%;
       height: auto;
     }
 
     @media (max-width: 767px) {
       /* Change the image source for screens smaller than 767 pixels wide (typical mobile devices) */
-      .img-fluid {
-        content: url(./images/team-item.jpg);
+      .img-fluidd {
+        content: url(./images/team-item.png);
+      }
+      .sticky-bottom-right {
+        left: auto;
       }
     }
+    .sticky-bottom-right {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 9999; /* Adjust the z-index as needed to ensure it's on top of other elements */
+      margin: 20px; /* Adjust the margin as needed */
+    }
+   
   </style>
 </head>
 
@@ -164,9 +175,9 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="btn-book text-end">
-              <a href="tel:+917861024557" class="btn btn-medium btn-outline-primary btn-pill text-uppercase">Call Now</a>
+          <div class="col-lg-3 col-md-4 col-sm-6 sticky-bottom-right">
+            <div class="text-end">
+              <a href="tel:+917861024557" class="btn btn-medium  btn-pill text-uppercase sticky-btn">Call Now</a>
             </div>
           </div>
         </div>
@@ -250,7 +261,7 @@
 
   <section id="intro" class="position-relative overflow-hidden">
     <div class="banner">
-      <img src="images/banner-image.jpg" alt="banner" class="img-fluid">
+      <img src="images/banner-image.jpg" alt="banner" class="img-fluid img-fluidd">
       <div class="container">
         <div class="banner-content position-absolute padding-large">
           <span
@@ -571,7 +582,7 @@
                 <div class="team-member d-flex align-items-center">
                   <div class="col-md-6">
                     <div class="image-holder me-4 mb-4">
-                      <img src="images/team-item.jpg" alt="team member" class="border-radius-10 img-fluid">
+                      <img src="images/team-itemm.jpg" alt="team member" class="border-radius-10 img-fluid">
                     </div>
                   </div>
                   <div class="col-md-6">
