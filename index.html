@@ -25,6 +25,12 @@
   <!-- script
     ================================================== -->
   <script src="js/modernizr.js"></script>
+  <style>
+    .read-more-content {
+      overflow: hidden;
+      max-height: 100px; /* Adjust the maximum height you want to show by default */
+    }
+  </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
@@ -558,9 +564,9 @@
                       <h3 class="fs-4 fw-bold text-dark">Dr. Jash Ajmera</h3>
                       <span class="text-uppercase fs-6 text-cadet-blue pb-2 d-block">Psychiatrist and Psychotherapist<br/>
                         M.B.B.S., D.P.M. (PSYCHIATRY)</span>
-                      <p>Practising psychiatry since 2017, has worked as a district programme officer at bhuj and bharuch(gujarat) under national mental health programme ,initiative by govt. of India, and was involved in numerous mental health awareness activities, rural OPDs, training programmes and has served numerous patients.
-
-                        A passionate advocate of community mental health, Dr. Jash has regular clinics at charitable institutes in order to bridge the gap and provide affordable quality mental health care to all. He conducts talks and workshops for NGOs, corporates and colleges, working towards awareness and prevention of psychiatric illness.</p>
+                      <p id="readMoreContent" class="read-more-content">Practising psychiatry since 2017, has worked as a district programme officer at bhuj and bharuch(gujarat) under national mental health programme ,initiative by govt. of India, and was involved in numerous mental health awareness activities, rural OPDs, training programmes and has served numerous patients. A passionate advocate of community mental health, Dr. Jash has regular clinics at charitable institutes in order to bridge the gap and provide affordable quality mental health care to all. He conducts talks and workshops for NGOs, corporates and colleges, working towards awareness and prevention of psychiatric illness.</p>
+                      <a href="javascript:void(0);" id="readMoreLink" onclick="toggleReadMore()">Read More</a>
+                      
                       <ul class="social-links list-unstyled d-flex">
                         <li>
                           <a href="https://www.facebook.com/sadbhavpsychiatry/">
@@ -589,6 +595,21 @@
                 </div>
               </div>
 
+              <script>
+                function toggleReadMore() {
+                  var readMoreContent = document.getElementById('readMoreContent');
+                  var readMoreLink = document.getElementById('readMoreLink');
+
+                  if (readMoreContent.style.maxHeight === '100px') {
+                    readMoreContent.style.maxHeight = 'none';
+                    readMoreLink.innerText = 'Read Less';
+                  } else {
+                    readMoreContent.style.maxHeight = '100px';
+                    readMoreLink.innerText = 'Read More';
+                  }
+                }
+
+              </script>
               <!-- <div class="swiper-slide">
                 <div class="team-member d-flex align-items-center">
                   <div class="col-md-6">
@@ -1106,7 +1127,7 @@
                 <a href="#our-services">Services</a>
               </li>
               <li class="pb-2">
-                <a href="#book-appointment">Booking</a>
+                <a href="tel:+917861024557">Booking</a>
               </li>
               <li class="pb-2">
                 <a href="#testimonial">Testimonial</a>
@@ -1117,11 +1138,11 @@
               <li class="pb-2">
                 <a href="#faqs">Faqs</a>
               </li>
-              <li class="pb-2">
+              <!-- <li class="pb-2">
                 <a href="#department">Department</a>
-              </li>
+              </li> -->
               <li class="pb-2">
-                <a href="#latest-blog">Blog</a>
+                <a href="https://aarogyaminds.com/blogs?category=Mental-Health-101">Blog</a>
               </li>
             </ul>
           </div>
