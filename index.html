@@ -30,6 +30,21 @@
       overflow: hidden;
       max-height: 100px; /* Adjust the maximum height you want to show by default */
     }
+    .image-holder {
+      text-align: center; /* Optional: Center the image */
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 767px) {
+      /* Change the image source for screens smaller than 767 pixels wide (typical mobile devices) */
+      .img-fluid {
+        content: url(./images/team-item.jpg);
+      }
+    }
   </style>
 </head>
 
@@ -1152,7 +1167,7 @@
             <h5 class="widget-title fw-semibold">Vesu Branch Timing</h5>
             <table class="schedule">
               <tr class="d-flex justify-content-between border-bottom py-2">
-                <td>Monday to Saturday 
+                <td style="font-weight: 500;">Monday to Saturday 
                  </td>
                 <!-- <td class="text-primary">8:00 am - 6:00 pm</td> -->
               </tr>
@@ -1176,7 +1191,7 @@
             <h5 class="widget-title fw-semibold">Katargam Branch Timing</h5>
             <table class="schedule">
               <tr class="d-flex justify-content-between border-bottom py-2">
-                <td>Monday to friday</td>
+                <td style="font-weight: 500;">Monday to friday</td>
                 <!-- <td class="text-primary">8:00 am - 6:00 pm</td> -->
               </tr>
               <tr class="d-flex justify-content-between border-bottom py-2">
